@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  </head>
-  <body>
-    <model-viewer src="https://drive.google.com/file/d/121GzZ7rg_wGopA-ZKskN4FtW9yWsvZA2/view?usp=drive_link" ar ar-modes="scene-viewer quick-look" camera-controls autoplay></model-viewer>
-  </body>
-</html>
