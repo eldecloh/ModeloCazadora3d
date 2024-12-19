@@ -1,1 +1,1 @@
-Prueba de modelo 3d
+Modelo 3d Diana la cazadora
