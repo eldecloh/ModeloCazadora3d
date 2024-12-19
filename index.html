@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo 3D en AR</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>Redirección según el sistema operativo</title>
+    <script>
+      // Función para detectar el sistema operativo y redirigir
+      function redirectBasedOnOS() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Detectar Android
+        if (/android/i.test(userAgent)) {
+          window.location.href = "android.html"; // Página para Android
+        }
+        // Detectar iOS
+        else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "ios.html"; // Página para iOS
+        } else {
+          alert("Sistema operativo no soportado para esta funcionalidad.");
+        }
+      }
+    </script>
   </head>
-  <body>
-    <h1>Modelo 3D en Realidad Aumentada</h1>
-    <model-viewer 
-      src="https://drive.google.com/uc?export=download&id=121GzZ7rg_wGopA-ZKskN4FtW9yWsvZA2" 
-      ar 
-      ar-modes="scene-viewer quick-look" 
-      camera-controls 
-      autoplay 
-      style="width: 100%; height: 500px;">
-    </model-viewer>
+  <body onload="redirectBasedOnOS()">
+    <h1>Redirigiendo...</h1>
+    <p>Por favor espera mientras detectamos tu dispositivo.</p>
   </body>
 </html>
